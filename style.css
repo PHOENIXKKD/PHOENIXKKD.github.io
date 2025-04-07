@@ -1,62 +1,67 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul {
-    margin: 0;
-    padding: 0;
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Set text to sans-serif */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #98c4d1;
-    color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+  color: #1f2937;
+  line-height: 1.6;
 }
 
-/* Navbar styling */
-nav {
-    background-color: #1e425d;
-    padding: 10px;
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #111827, #1f2937);
+  color: white;
+  transform: rotate(3deg);
+  transform-origin: top left;
 }
 
-nav div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo img {
+  height: 50px;
 }
 
 nav a {
-    color: #f5f5f5;
-    text-decoration: none;
-    margin-left: 15px;
-    transition: transform 0.3s ease-in-out;
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
 }
 
-nav a:hover {
-    transform: translateY(-3px);
+nav a.active {
+  border-bottom: 2px solid white;
 }
 
-/* Main content styling */
+/* Main section */
 main {
-    padding: 20px;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #111827;
 }
 
-h2 {
-    font-size: 1.5em;
-    margin-top: 20px;
-    margin-bottom: 10px;
+.hero p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
 }
 
-p, ul {
-    margin-bottom: 15px;
-}
-
-/* Image styling */
-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+/* Footer */
+footer {
+  background: linear-gradient(to right, #1f2937, #374151);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  transform: rotate(-3deg);
+  transform-origin: bottom left;
 }

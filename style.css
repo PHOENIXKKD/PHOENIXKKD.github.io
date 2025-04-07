@@ -1,4 +1,4 @@
-/* Global styles */
+/* Reset & Basics */
 * {
   margin: 0;
   padding: 0;
@@ -6,62 +6,94 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
-  color: #1f2937;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #235084, #3a6ea5);
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: linear-gradient(to right, #111827, #1f2937);
-  color: white;
   transform: rotate(3deg);
   transform-origin: top left;
+  background: linear-gradient(to right, #ff4b1f, #ff9068);
+  padding: 1rem 0;
 }
 
-.logo img {
-  height: 50px;
+.header-box {
+  transform: rotate(-3deg);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
 nav a {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   text-decoration: none;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s ease;
 }
 
+nav a:hover,
 nav a.active {
-  border-bottom: 2px solid white;
+  color: #ffeaa7;
 }
 
-/* Main section */
-main {
-  padding: 4rem 2rem;
+nav a.active::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: white;
+  margin-top: 4px;
+  width: 100%;
+}
+
+/* Hero */
+.hero {
   text-align: center;
+  padding: 6rem 2rem;
+  flex: 1;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #111827;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  margin: 0.75rem 0;
+  color: #f0f8ff;
 }
 
 /* Footer */
 footer {
-  background: linear-gradient(to right, #1f2937, #374151);
-  color: white;
-  text-align: center;
-  padding: 1rem;
   transform: rotate(-3deg);
   transform-origin: bottom left;
+  background: linear-gradient(to right, #ff4b1f, #ff9068);
+  padding: 1rem 0;
+}
+
+.footer-box {
+  transform: rotate(3deg);
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-weight: 500;
 }
